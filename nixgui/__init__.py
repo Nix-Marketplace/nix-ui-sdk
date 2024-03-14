@@ -1,7 +1,6 @@
 from nicegui import *
 
 # ----- CONSTANTS ----- #
-BLACK = "#000000"
 
 # ----- STYLING ----- #
 
