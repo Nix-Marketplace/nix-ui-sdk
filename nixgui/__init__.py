@@ -1,4 +1,5 @@
 from nicegui import *
+from nicegui import events
 
 # ----- CONSTANTS ----- #
 
