@@ -1,11 +1,12 @@
 from setuptools import setup, find_packages
 
 setup(
-    name='NixGUI',
+    name='nixgui',
     version='0.0.1',
     packages=find_packages(),
     install_requires=[
         'nicegui',
+        'requests'
     ],
     author='Nix',
     author_email='kay@nix.tech',
