@@ -17,11 +17,4 @@ ui.select.default_classes("mt-2 block rounded-md border-0 py-1.5 pl-3 pr-10 text
 ui.switch.default_classes("relative inline-flex h-6 w-11 flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out focus:outline-none focus:ring-2 focus:ring-blue-grey-6 focus:ring-offset-2 w-96")
 ui.upload.default_classes("mt-2 block rounded-md border-0 py-1.5 text-blue-grey-9 shadow-sm focus:ring-2 focus:ring-inset focus:ring-blue-grey-6 sm:text-sm sm:leading-6 w-96").default_props("color=blue-grey")
 
-# ----- DEFAULT BEHAVIOR ----- #
 
-class upload(ui.upload):
-    def __init__(self, *args, **kwargs):
-        # Set default instantiation values
-        kwargs["multiple"] = True if "multiple" not in kwargs else kwargs["multiple"]
-        kwargs["auto_upload"] = True if "auto_upload" not in kwargs else kwargs["auto_upload"]
-        super().__init__(*args, **kwargs)
