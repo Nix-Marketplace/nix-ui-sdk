@@ -21,7 +21,10 @@ ui.upload.default_classes("mt-2 block rounded-md border-0 py-1.5 text-blue-grey-
 
 # ----- RUN CONFIGURATION ----- #
 
-def run(
+# Store the original run function
+original_run = ui.run
+
+def custom_run(
     *,
     title: str = 'NixGUI App',
     reload: bool = True,
@@ -42,7 +45,6 @@ def run(
         **kwargs: Additional arguments passed to NiceGUI's run() function
     """
     # Get the original run function's signature
-    original_run = ui.run
     original_params = inspect.signature(original_run).parameters
     
     # Create a dictionary of default values from the original function
@@ -66,5 +68,8 @@ def run(
     
     # Call the original run function with our updated parameters
     original_run(**defaults)
+
+# Override the ui.run function
+ui.run = custom_run
 
 
