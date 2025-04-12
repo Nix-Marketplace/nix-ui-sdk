@@ -24,10 +24,7 @@ ui.upload.default_classes("mt-2 block rounded-md border-0 py-1.5 text-blue-grey-
 def run(
     *,
     title: str = 'NixGUI App',
-    host: str = '0.0.0.0',
-    port: int = 8080,
     reload: bool = True,
-    show: bool = True,
     dark: bool = False,
     favicon: Optional[str] = None,
     storage_secret: Optional[str] = None,
@@ -38,10 +35,7 @@ def run(
     
     Args:
         title: The title of the application
-        host: The host to run the application on
-        port: The port to run the application on
         reload: Whether to reload the application on code changes
-        show: Whether to show the application in a browser
         dark: Whether to use dark mode
         favicon: The path to the favicon
         storage_secret: The secret key for storage
@@ -61,10 +55,7 @@ def run(
     # Update defaults with our custom values
     defaults.update({
         'title': title,
-        'host': host,
-        'port': port,
         'reload': reload,
-        'show': show,
         'dark': dark,
         'favicon': favicon,
         'storage_secret': storage_secret,
